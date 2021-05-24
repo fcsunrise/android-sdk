@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CardInputView -->
+    <string name="card_input_add_hint_number">Номер карты</string>
+    <string name="card_input_add_hint_expiry">MM/YY</string>
+    <string name="card_input_add_hint_cvv">CVV</string>
+    <string name="card_input_enter_all_fields">Пожалуйста, заполните все поля</string>
+    <string name="incorrect_data_from_scan">Неудалось отсканировать карту</string>
+</resources>

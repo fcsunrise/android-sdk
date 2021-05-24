@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Atlas</string>
+
+    <!-- MainActivity-->
+    <string name="web_transaction_button">WEB транзакция</string>
+    <string name="web_transaction_token_card_button">Токенизация карты</string>
+    <string name="web_transaction_status_button">Статус транзакции</string>
+    <string name="token_transaction_status_button">Статус токенизации</string>
+    <string name="host_transaction_button">Host to host</string>
+    <string name="moto_transaction_button">MOTO-эквайринг</string>
+    <string name="host_token_transaction_button">Host to host по токену</string>
+    <string name="web_token_transaction_button">WEB транзакция по токену</string>
+    <string name="host_no_auth_transaction_button">Платеж без 3DS</string>
+
+    <string name="last_transaction_status_text">Статус последней транзакции:</string>
+    <string name="last_transaction_id_text">ID последней транзакции:</string>
+    <string name="dialog_transaction_summ_text">Введите сумму</string>
+
+    <string name="dialog_transaction_cvv_text">Введите cvv</string>
+    <string name="dialog_transaction_token_text">Введите токен</string>
+
+    <!-- Dialog-->
+    <string name="dialog_loading_text">Loading...</string>
+    <string name="dialog_validation_text">Validation...</string>
+    <string name="dialog_transaction_number_text">Введите номер транзакции</string>
+    <string name="dialog_summ_text">Сумма</string>
+    <string name="dialog_token_text">Токен</string>
+    <string name="dialog_transaction_text">Введите данные</string>
+
+    <string name="number_transaction_text">Номер транзакции</string>
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/webTransactionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/web_transaction_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tokenCardButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/web_transaction_token_card_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webTransactionButton" />
+
+    <Button
+        android:id="@+id/webTransactionStatusButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/web_transaction_status_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tokenCardButton" />
+
+    <TextView
+        android:id="@+id/idTransactionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noAuthHostToHostButton" />
+
+    <TextView
+        android:id="@+id/cardNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTransactionTextView" />
+
+    <TextView
+        android:id="@+id/cardTokenTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberTextView" />
+
+    <Button
+        android:id="@+id/hostToHostButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/host_transaction_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tokenStatusButton" />
+
+    <Button
+        android:id="@+id/motoTransactionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/moto_transaction_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostToHostButton" />
+
+    <Button
+        android:id="@+id/tokenStatusButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/token_transaction_status_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webTransactionStatusButton" />
+
+    <Button
+        android:id="@+id/webTokenTransactionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/web_token_transaction_button"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motoTransactionButton" />
+
+    <Button
+        android:id="@+id/tokenHostToHostButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/host_token_transaction_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webTokenTransactionButton" />
+
+    <Button
+        android:id="@+id/noAuthHostToHostButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/host_no_auth_transaction_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tokenHostToHostButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

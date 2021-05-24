@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_shape_background"
+    android:padding="25dp">
+
+    <Button
+        android:id="@+id/payButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="Оплатить"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:background="@drawable/rounded_shape_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCardDateEditText" />
+
+    <EditText
+        android:id="@+id/addCardNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/color_grey"
+        android:digits="01234 56789"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/card_input_add_hint_number"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="19"
+        android:nextFocusForward="@+id/addCardDateEditText"
+        android:textColor="@color/color_black"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:text="1818 1818 1818 1818" />
+
+    <EditText
+        android:id="@+id/addCardDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/card_input_add_hint_expiry"
+        android:textSize="13dp"
+        android:backgroundTint="@color/color_grey"
+        android:digits="1234567890/"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="5"
+        android:nextFocusForward="@+id/addCardCvvEditText"
+        android:textColor="@color/color_black"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintEnd_toStartOf="@+id/addCardCvvEditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCardNumberEditText" />
+
+    <EditText
+        android:id="@+id/addCardCvvEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/card_input_add_hint_cvv"
+        android:textSize="13dp"
+        android:backgroundTint="@color/color_grey"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:textColor="@color/color_black"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintBottom_toBottomOf="@+id/addCardDateEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/addCardDateEditText"
+        app:layout_constraintTop_toTopOf="@+id/addCardDateEditText" />
+
+    <TextView
+        android:id="@+id/transactionNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:textSize="16dp"
+        tools:text="#2359696003234044"
+        android:textColor="@color/color_black"
+        app:layout_constraintBottom_toBottomOf="@+id/transactionTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/transactionTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/transactionTitleTextView" />
+
+    <TextView
+        android:id="@+id/transactionSummTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="36dp"
+        android:textColor="@color/color_black"
+        tools:text="150.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactionNumberTextView" />
+
+    <TextView
+        android:id="@+id/transactionTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:textColor="@color/color_black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/transactionNumberTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+        tools:text="Оплата счета" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactionSummTextView" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="50dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/scanCardImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addCardNumberEditText"
+        app:layout_constraintEnd_toEndOf="@+id/addCardNumberEditText"
+        app:layout_constraintTop_toTopOf="@+id/addCardNumberEditText"
+        app:srcCompat="@drawable/vec_icon_photo_camera" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:src="@drawable/mastercard_logo"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        android:src="@drawable/visa_logo"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/payButton"
+        android:src="@drawable/pci_logo"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
